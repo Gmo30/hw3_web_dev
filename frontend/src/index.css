@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #e9a5c1;
+  --color-pink-light: rgb(253, 230, 230);
+  --color-cream: #faf5f0;
+  --color-black: #1a1a1a;
+  --color-pink-deep: #c9637e;
+}
+
+
+
+.btn-dark {
+  display: inline-block;
+  padding: 0.9rem 2.8rem;
+  background: var(--color-black);
+  border: 1.5px solid var(--color-black);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background: var(--color-pink-deep);
+  border-color: var(--color-pink-deep);
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.page-heading{
+  background: var(--color-pink-light);
+  padding: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
