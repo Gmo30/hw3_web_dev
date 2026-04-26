@@ -1,6 +1,5 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
 export interface MenuItem {
   id: number;
   name: string;
@@ -13,7 +12,6 @@ export interface CartItem extends MenuItem {
   quantity: number;
 }
 
-// ── Context ───────────────────────────────────────────────────────────────────
 interface CartContextType {
   cart: CartItem[];
   addToCart: (item: MenuItem) => void;
@@ -32,7 +30,6 @@ export const CartContext = createContext<CartContextType>({
 
 export const useCart = () => useContext(CartContext);
 
-// ── Provider ──────────────────────────────────────────────────────────────────
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>(() => {
     const savedCart = localStorage.getItem("my-shopping-cart");

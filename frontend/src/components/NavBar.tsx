@@ -109,7 +109,6 @@ const Navbar: React.FC = () => {
                         </button>
                     </div>
                 </div>
-                {/* Mobile: cart icon + hamburger */}
                 <div className="flex md:hidden items-center">
                     <button
                         className="flex flex-col justify-center gap-1.25 bg-transparent border-0 cursor-pointer px-4 py-3"
@@ -125,7 +124,6 @@ const Navbar: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Mobile dropdown */}
                 {menuOpen && (
                     <div className="mobile-nav flex flex-col md:hidden border-t border-[#4a2a14] text-center">
                         <Link to="/" className="nav-link border-b border-[#4a2a14]">

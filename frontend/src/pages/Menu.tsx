@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { menuItems } from "./menuItems.ts";
 import { useCart } from "../components/CartContext";
-import CartPanel from "../components/CartPanel";
 
 const MenuPage: React.FC = () => {
-  const { cart, addToCart } = useCart();
-  const [cartOpen, setCartOpen] = useState(false);
+  const { addToCart } = useCart();
   const [flashedIds, setFlashedIds] = useState<Set<number>>(new Set());
   const [toast, setToast] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Total item count for the badge
-  const totalItems = cart.reduce((sum, i) => sum + i.quantity, 0);
 
   const handleAddToCart = (item: (typeof menuItems)[0]) => {
     addToCart(item);
@@ -133,7 +128,6 @@ const MenuPage: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           transition: "margin-right 0.35s cubic-bezier(.4,0,.2,1)",
-          marginRight: cartOpen ? 360 : 0,
         }}>
           <div style={{
             display: "grid",

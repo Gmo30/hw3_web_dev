@@ -11,7 +11,6 @@ const AboutPage: React.FC = () => {
         className="flex-1 grid place-items-center"
         style={{
           minHeight: "100vh",
-          // Replace the URL with your actual image path:
           backgroundImage: `url(${about})`,
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
