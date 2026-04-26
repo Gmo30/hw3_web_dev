@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
     
   ],
-  base:'/hw3_web_dev/'
+  base: '/hw3_web_dev/'
 })
